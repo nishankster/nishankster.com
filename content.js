@@ -108,11 +108,11 @@ window.SITE = {
      in src, e.g. "photos/piedmont-park.jpg". Leave src "" to show a placeholder. */
   photos: [
     { src: "waves.jpg", caption: "waves" },
-    { src: "blue-morning.jpg", caption: "blue morning" },
-    { src: "trail-day.jpg", caption: "trail day" },
-    { src: "city-light.jpg", caption: "city light" },
-    { src: "monsoon-green.jpg", caption: "monsoon green" },
-    { src: "dusk.jpg", caption: "dusk" },
+    { src: "", caption: "blue morning" },
+    { src: "", caption: "trail day" },
+    { src: "", caption: "city light" },
+    { src: "", caption: "monsoon green" },
+    { src: "", caption: "dusk" },
   ],
 
   /* ---------- Rocky ---------- */
