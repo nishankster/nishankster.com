@@ -22,7 +22,7 @@
 
   <style>
     :root {
-      --bg: #F7F5G0;        /* warm birch white */
+      --bg: #F7F5F0;        /* warm birch white */
       --white: #FFFFFF;
       --soft: #EFEBE3;      /* quiet panels */
       --ink: #141414;
@@ -142,14 +142,16 @@
     .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     @media (max-width: 600px) { .photos { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
     .photo { margin: 0; }
-    .photo .frame {
-      aspect-ratio: 4/5; overflow: hidden; border-radius: 22px; background: var(--soft);
-      border: 1px solid rgba(20,20,20,.08); box-shadow: 0 12px 28px -24px rgba(20,20,20,.4);
-    }
+    .photo .frame { aspect-ratio: 4/5; overflow: hidden; border-radius: var(--radius); background: var(--soft); }
     .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s; }
     .photo:hover img { transform: scale(1.04); }
     .photo figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: 8px; }
-    .rocky { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); max-width: 640px; }
+    .rocky { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); max-width: 640px; display: flex; gap: 20px; align-items: flex-end; }
+    .rocky-dog { flex: none; width: 76px; height: 76px; color: var(--ink); opacity: .7; }
+    .rocky-dog .tag { transform-box: fill-box; transform-origin: 50% 0; }
+    .rocky:hover .rocky-dog .tag { animation: jingle .6s ease; }
+    @keyframes jingle { 25% { transform: rotate(18deg); } 60% { transform: rotate(-14deg); } }
+    @media (max-width: 480px) { .rocky-dog { width: 60px; height: 60px; } }
     .rocky h4 { font-family: "Inter Tight", sans-serif; font-weight: 500; font-size: 1.1rem; }
     .rocky p { color: var(--ink-soft); font-size: .95rem; }
 
@@ -293,7 +295,10 @@
             <div class="stats" id="runStats"></div>
           </div>
           <div class="photos reveal" id="photos"></div>
-          <div class="rocky reveal"><h4 id="rockyTitle"></h4><p id="rockyText"></p></div>
+          <div class="rocky reveal">
+            <svg class="rocky-dog" viewBox="0 0 120 120" role="img" aria-label="Portrait of Rocky"><path fill="currentColor" d="M42 24 C 30 20, 16 28, 14 42 C 12 54, 16 64, 23 69 C 27 72, 31 70, 32 65 C 34 54, 35 41, 40 31 Z"/><path fill="currentColor" d="M78 24 C 90 20, 104 28, 106 42 C 108 54, 104 64, 97 69 C 93 72, 89 70, 88 65 C 86 54, 85 41, 80 31 Z"/><path fill="currentColor" d="M42 60 C 34 74, 22 92, 14 121 H 106 C 98 92, 86 74, 78 60 Z"/><path fill="currentColor" d="M60 17 C 75 17, 85 28, 85 42 C 85 54, 79 62, 73 70 C 69 76, 65 81, 60 81 C 55 81, 51 76, 47 70 C 41 62, 35 54, 35 42 C 35 28, 45 17, 60 17 Z"/><path fill="var(--bg)" d="M59 88 C 52 95, 48 105, 50 113 C 52 119, 64 119, 67 113 C 70 104, 66 95, 59 88 Z"/><path fill="var(--bg)" d="M59.2 22 C 59.4 32, 59.7 42, 60.3 53 L 61.3 53 C 61 42, 60.7 32, 60.4 22 Z"/><path fill="var(--bg)" opacity=".18" d="M53 66 C 53 62.5, 67 62.5, 67 66 C 67 69, 63 71, 60 71 C 57 71, 53 69, 53 66 Z"/><circle class="tag" cx="80" cy="96" r="3.8" fill="var(--accent)"/></svg>
+            <div><h4 id="rockyTitle"></h4><p id="rockyText"></p></div>
+          </div>
         </div>
       </div>
     </section>
