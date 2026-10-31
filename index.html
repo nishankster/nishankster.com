@@ -75,7 +75,9 @@
     .textlink { font-size: .92rem; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color .2s, border-color .2s; }
     .textlink:hover { color: var(--accent); border-color: var(--accent); }
 
-    .hero-art { width: 100%; max-width: 380px; justify-self: end; }
+    .hero-art { width: 100%; max-width: 380px; justify-self: end; position: relative; }
+    .side-note { position: absolute; top: 8%; right: -34px; writing-mode: vertical-rl; font-size: .74rem; letter-spacing: .32em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
+    @media (max-width: 1240px) { .side-note { right: -22px; } }
     .hero-art svg { width: 100%; height: auto; display: block; overflow: visible; }
     .hero-art .streams { opacity: .38; }
     .art-note { margin-top: 12px; font-size: .78rem; letter-spacing: .08em; color: var(--ink-soft); display: flex; align-items: center; gap: 10px; }
@@ -83,6 +85,7 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 40px; padding-bottom: 80px; }
       .hero-art { max-width: 260px; justify-self: start; order: -1; }
+      .side-note { display: none; }
     }
 
     /* ---------- sections ---------- */
@@ -237,6 +240,7 @@
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
+      <div class="side-note" id="sideNote"></div>
       <!-- Hero art: a raked zen garden that is also a physics diagram.
            The lines are true streamlines of ideal flow around a stone (psi = U*y*(1 - a^2/r^2));
            one terracotta dot, like the logo's, drifts along a stream. -->
@@ -390,6 +394,7 @@
     document.title = S.name + ' — payments, AI & long runs';
     set('navName', esc(S.name)); set('footName', esc(S.name));
     set('greet', esc(S.hero.greeting) + ' · ' + esc(S.location));
+    set('sideNote', esc(S.hero.sideNote || ''));
     set('headline', fmt(S.hero.headline)); set('intro', fmt(S.hero.intro));
 
     set('aboutTitle', fmt(S.about.title));
