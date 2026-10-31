@@ -39,7 +39,7 @@ window.SITE = {
       ["day job", "payments engineering"],
       ["weekends", "ATC run lead"],
       ["schooling", "MBA, UGA Terry"],
-      ["fuel", "matcha, coffee & miles"],
+      ["fuel", "bagels, coffee & miles"],
     ],
   },
 
@@ -48,7 +48,7 @@ window.SITE = {
   work: [
     {
       label: "the day job",
-      title: "Payments Technology",
+      title: "Real-time payments",
       text: "The rails that move money in seconds instead of days, and the engineering it takes to make them feel effortless.",
       tags: ["Zelle","real-time", "resilient", "always on"],
       featured: true,
@@ -107,7 +107,7 @@ window.SITE = {
      Upload images into the "photos" folder on GitHub, then put the file name
      in src, e.g. "photos/piedmont-park.jpg". Leave src "" to show a placeholder. */
   photos: [
-    { src: "photos/waves.jpg", caption: "waves" },
+    { src: "", caption: "golden hour" },
     { src: "", caption: "blue morning" },
     { src: "", caption: "trail day" },
     { src: "", caption: "city light" },
@@ -141,7 +141,7 @@ window.SITE = {
     email: "hello@nishankster.com",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/nishankjain" },
-      { label: "Medium", url: "https://medium.com/" },
+      { label: "Medium", url: "https://medium.com/@nishankster" },
     ],
   },
 };
