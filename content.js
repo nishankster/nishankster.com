@@ -107,7 +107,7 @@ window.SITE = {
      Upload images into the "photos" folder on GitHub, then put the file name
      in src, e.g. "photos/piedmont-park.jpg". Leave src "" to show a placeholder. */
   photos: [
-    { src: "", caption: "golden hour" },
+    { src: "/photos/waves.jpg", caption: "waves" },
     { src: "", caption: "blue morning" },
     { src: "", caption: "trail day" },
     { src: "", caption: "city light" },
