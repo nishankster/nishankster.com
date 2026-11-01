@@ -88,7 +88,7 @@ window.SITE = {
   /* ---------- Writing ----------
      When a post is live, replace "coming soon" with a date and add its url. */
   writing: [
-    { date: "coming soon", title: "The U.S. payment rails, mapped", text: "A practical ontology of Zelle, RTP, FedNow and ACH, and how they fit together.", url: "" },
+    { date: "Oct 2026", title: "The U.S. payment rails, mapped", text: "A practical ontology of Zelle, RTP, FedNow and ACH, and how they fit together.", url: "https://nishankster.medium.com/a-payment-ontology-for-zelle-rtp-fednow-and-ach-3fdedd24437c?sharedUserId=nishankster" },
     { date: "coming soon", title: "SPECTRA: governing AI with specs", text: "How a four-level framework keeps AI-assisted delivery fast without losing control.", url: "" },
     { date: "coming soon", title: "Quantum for busy engineers", text: "What I’ve learned teaching myself quantum computing with zero physics background.", url: "" },
   ],
