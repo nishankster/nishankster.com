@@ -21,7 +21,7 @@ window.SITE = {
   /* ---------- Top of the page ---------- */
   hero: {
     greeting: "hello, I’m Nishank",
-    headline: "I help money move *in real time*, then go for a long run.",
+    headline: "I help move money *in real time*, then go for a long run.",
     intro: "I work on real-time payments, the rails that move money in seconds, here in Atlanta. I’m also into specs, AI-assisted teams, photography, and learning quantum computing one stubborn qubit at a time.",
     sideNote: "slow down · notice things",  // the small vertical line of text
   },
