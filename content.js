@@ -69,7 +69,7 @@ window.SITE = {
       text: "Taking AI coding tools like Claude Code and GitLab Duo from “should we try this?” to everyday practice.",
     },
     {
-      label: "work in progress",
+      label: "First Draft Published",
       title: "A payment ontology",
       text: "A deep map of how Zelle, RTP, FedNow and ACH actually work and connect. Coming to Medium soon.",
     },
@@ -126,7 +126,7 @@ window.SITE = {
   now: {
     updated: "Oct 2026",
     items: [
-      { text: "map the U.S. payment rails, properly" },
+      { text: "map the U.S. payment rails, properly", done: true },
       { text: "roll SPECTRA out to more teams" },
       { text: "set up this website", done: true },
       { text: "finally understand quantum circuits" },
